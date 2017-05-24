@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<title>DOMエレメント(さらにタグで囲って階層化してみます)</title>
+
+</head>
+	<body>
+	    <script src="mithril.js"></script>
+	    <script>
+			var root = document.body
+			//さらにタグで囲って階層化してみます
+			m.render(root,
+				m("main", [
+				    m("h1", {class: "title"}, "最初のMithrilアプリケーション"),
+				    m("button", "ボタン"),
+				])
+			)
+	    </script>
+	</body>
+</html>
