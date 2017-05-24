@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<title>DOMエレメント(複数のエレメントを追加してみましょう:)</title>
+
+</head>
+	<body>
+	    <script src="mithril.js"></script>
+	    <script>
+			var root = document.body
+			//複数のエレメントを追加してみましょう
+			m.render(root,
+			[
+				m("h1", {class: "title"}, "最初のMithrilアプリケーション"),
+				m("button", "ボタン"),
+			])
+	    </script>
+	</body>
+</html>

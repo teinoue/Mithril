@@ -22,8 +22,9 @@
 
 			var Splash = {
 			    view: function() {
-			        return m("a", {href: "/hello"}, "ようこそ!")
-			        
+			        return m("a", {href: "#!hello_Key"}, "ようこそ!")
+			        //return m("a", {href: "#!/splash"}, "ようこそ!")
+
 			    }
 			}
 			
@@ -35,9 +36,9 @@
 			rootのすぐ右にある"/splash"はデフォルトのラウトです
 			*/
 			
-			m.route(root, "/splash", {
-			    "/splash": Splash,
-			    "/hello": Hello,
+			m.route(root, "splash1", {
+			    "splash_Key": Splash,
+			    "hello_Key": Hello,
 			});
 			
 	    </script>

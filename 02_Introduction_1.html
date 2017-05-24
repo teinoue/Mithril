@@ -7,17 +7,22 @@
 
 </head>
 	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		
 	    <script src="mithril.js"></script>
 	    <script>
 			var root = document.body
 			
-			// テキストを<h1>タグでくくってみましょう
-			m.render(root,m("h1","最初のMithrilアプリケーション"))
+			// テキストを<h1>タグでくくってみましょう(rootではなくDiv1に指定)
+			m.render(document.querySelector("#div1"),m("h1","最初のMithrilアプリケーション"))
 			
 			// m()関数を使うと、あらゆるHTML構造が表現できます。<h1>タグにクラスを追加するには次のようにします
-			m.render(root,m("h1",{class: "title"},"最初のMithrilアプリケーションCSS"))
+			//(rootではなくDiv2に指定)
+			m.render(document.querySelector("#div2"),m("h1",{class: "title"},"最初のMithrilアプリケーションCSS"))
 			
-			// ***上記は1つ目は表示せずに2行目のみ表示する
+			// ***同じオブジェクトの場合(例えば両方ともrootする場合)上記は1つ目は表示せずに2行目のみ表示する
+			// ***複数のm.render関数を表示する場合はm.render関数の第一引数を上記のようにする
 			
 	    </script>
 	</body>
