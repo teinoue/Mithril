@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<title>コンポーネント</title>
+
+</head>
+	<body>
+	    <script src="mithril.js"></script>
+	    <script>
+			var root = document.body
+			
+			/*
+			m.mount()関数はm.render()関数と似ていますが、後者は一度しかHTMLをレンダリング（DOMの生成）を行いません
+			前者はMithrilの自動再描画システムを起動します。この意味を理解するために、イベントを追加してみましょう
+			*/
+			var count = 0 // 変数を追加
+			var Hello = {
+			    view: function() {
+			        return m("main", [
+						m("h1", {class: "title"}, "最初のMithrilアプリケーション"),
+						
+						// 変更前 m("button", "ボタン"),
+						// この行を変更
+						m("button", {onclick: function() {count++}}, count + " クリック"),
+			        ])
+			    }
+			}
+			
+			//m.render()を呼び出さなくてもcount変数の変更をMithrilがHTMLに反映します
+			//MithrilはボタンのテキストのDOM部分だけを更新します
+			m.mount(root, Hello)
+	    </script>
+	</body>
+</html>
