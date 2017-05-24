@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<title>DOMエレメント</title>
+
+</head>
+	<body>
+	    <script src="mithril.js"></script>
+	    <script>
+			var root = document.body
+			
+			// テキストを<h1>タグでくくってみましょう
+			m.render(root,m("h1","最初のMithrilアプリケーション"))
+			
+			// m()関数を使うと、あらゆるHTML構造が表現できます。<h1>タグにクラスを追加するには次のようにします
+			m.render(root,m("h1",{class: "title"},"最初のMithrilアプリケーションCSS"))
+			
+			// ***上記は1つ目は表示せずに2行目のみ表示する
+			
+	    </script>
+	</body>
+</html>

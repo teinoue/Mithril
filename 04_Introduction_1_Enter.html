@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<title>ラウティング</title>
+
+</head>
+	<body>
+	    <script src="mithril.js"></script>
+	    <script>
+			var root = document.body
+			
+			var Splash = {
+			    view: function() {
+			        return m("a", {href: "#!/hello"}, "ようこそ!")
+			    }
+			}
+			
+			/*
+			モジュールを定義する
+			「:」を前に付いた単語を書くことで、ラウトに引数を設定することができます
+			*/
+			
+			m.route(root, "/splash", {
+			    "/splash": Splash,
+			    "/hello": "Hello",
+			});
+			
+	    </script>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    <a "hello" />Hello
+	</body>
+</html>
