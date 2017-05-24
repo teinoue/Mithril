@@ -7,6 +7,41 @@
 
 </head>
 	<body>
-	
+	    <script src="mithril.js"></script>
+	    <script>
+			var root = document.body
+			var Hello = {
+						    view: function() {
+						        return m("main", [
+						            m("h1", {class: "title"}, "最初のMithrilアプリケーション"),
+						            m("button", "ボタン"),
+						        ])
+						    }
+						}
+						
+
+			var Splash = {
+			    view: function() {
+			        return m("a", {href: "#!/hello"}, "ようこそ!")
+			        //return m("a", {href: "#!/splash"}, "ようこそ!")
+
+			    }
+			}
+			
+			/*
+			.route関数はm.mountと同じ自動再描画機能を持っています。
+			これに加えて、URLの変更に対応することができます。
+			URLに#!の文字を見つけたら、Mithrilに何をするか教えます。
+			
+			rootのすぐ右にある"/splash"はデフォルトのラウトです
+			*/
+			
+			m.route(root, "/splash", {
+			    "/splash": Splash,
+			    "/hello": Hello,
+			});
+			
+	    </script>
+	    
 	</body>
 </html>
